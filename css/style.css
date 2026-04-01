@@ -1,0 +1,138 @@
+/* Reset and basic styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Helvetica Neue', sans-serif;
+}
+
+body {
+  background: #F5F1E9; /* light cream */
+  color: #7B5E57;      /* dark brown for text */
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: #9CAF88; /* sage green */
+}
+
+header h1 {
+  font-size: 3rem;
+  color: #F5F1E9; /* light cream text */
+}
+
+header p {
+  font-size: 1.2rem;
+  color: #D6A77A; /* light brown accent */
+}
+
+header nav {
+  margin-top: 1rem;
+}
+
+header nav a {
+  margin: 0 1rem;
+  text-decoration: none;
+  color: #F5F1E9; /* light cream */
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+header nav a:hover {
+  color: #D6A77A; /* light brown on hover */
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 100vh;
+  background: url('hero-bg.jpg') no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  overflow: hidden;
+}
+
+.hero .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(155, 175, 136, 0.5); /* sage overlay */
+}
+
+.hero-content {
+  position: relative;
+  text-align: center;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.hero h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #F5F1E9; /* cream title */
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #D6A77A; /* light brown subtitle */
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  background: #D6A77A; /* light brown button */
+  color: #F5F1E9;      /* cream text */
+  text-decoration: none;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #C08F68; /* slightly darker on hover */
+  transform: translateY(-2px);
+}
+
+/* Sections */
+.section {
+  text-align: center;
+  padding: 4rem 1rem;
+}
+
+.section h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  animation: fadeInUp 1.5s ease forwards;
+  color: #9CAF88; /* sage green headings */
+}
+
+.section p {
+  font-size: 1.1rem;
+  color: #7B5E57; /* dark brown body text */
+  margin-bottom: 2rem;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: #9CAF88; /* sage footer */
+  color: #F5F1E9;      /* cream text */
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(-20px);}
+  100% { opacity: 1; transform: translateY(0);}
+}
+
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(30px);}
+  100% { opacity: 1; transform: translateY(0);}
+}
