@@ -26,7 +26,7 @@ header h1 {
 
 header p {
   font-size: 1.2rem;
-  color: #D6A77A; /* light brown accent */
+  color: white; /* light brown accent */
 }
 
 header nav {
@@ -47,25 +47,30 @@ header nav a:hover {
 
 .hero {
   position: relative;
-  height: 100vh;
-  background: url('hero-bg.jpg') no-repeat center center/cover; /* main background */
+  height: 100vh; /* full viewport height */
+  width: 100%;   /* full width */
+  
+  /* background settings */
+  background-image: url('images/hero-bg.png');
+  background-position: center;   /* center the image */
+  background-repeat: no-repeat;  /* don’t tile the image */
+  background-size: cover;        /* scale image to cover the div */
+  
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
   overflow: hidden;
+  color: white;
 }
 
-.hero .overlay {
+.hero::before {
+  content: "";
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 0; left: 0;
   width: 100%;
   height: 100%;
-  /* Use the overlay image */
-  background: url('overlay.png') no-repeat center center/cover; 
-  opacity: 0.4; /* controls transparency of the overlay image */
-  pointer-events: none; /* allows clicks on text/buttons above */
+  background: rgba(156, 175, 134, 0.4); /* semi-transparent sage */
+  z-index: 1; /* sits on top of background but below text */
 }
 
 .hero-content {
@@ -85,7 +90,7 @@ header nav a:hover {
 .hero p {
   font-size: 1.2rem;
   margin-bottom: 2rem;
-  color: #D6A77A; /* light brown subtitle */
+  color: white; /* light brown subtitle */
 }
 
 .btn {
